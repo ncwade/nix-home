@@ -1,16 +1,12 @@
-{ config, pkgs, home-manager, ... }:
+{ pkgs, ... }:
 {
-  imports = [
-    ./common.nix
-    home-manager.nixosModule
+  home.username = "ncwade";
+  home.homeDirectory = "/home/ncwade";
+  home.stateVersion = "22.05";
+  
+  imports = [ 
+    ./cli.nix
+    ./gui.nix
   ];
-
-  home-manager.users.ncwade = { ... }: {
-    imports = [ 
-      ./cli.nix
-      ./gui.nix
-    ];
-    home.stateVersion = "22.05";
-  };
 }
 
