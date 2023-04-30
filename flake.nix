@@ -11,13 +11,14 @@
 
     outputs = {nixpkgs, home-manager, ...}: {
         defaultPackage.x86_64-linux = home-manager.defaultPackage.x86_64-linux;
+        defaultPackage.aarch64-darwin = home-manager.defaultPackage.aarch64-darwin;
 
         homeConfigurations = {
-            "ncwade-intel-linux" = home-manager.lib.homeManagerConfiguration {
+            "intel-linux" = home-manager.lib.homeManagerConfiguration {
                 pkgs = nixpkgs.legacyPackages.x86_64-linux;
                 modules = [ ./home-gui.nix ];
             };
-            "ncwade-arm-mac" = home-manager.lib.homeManagerConfiguration {
+            "arm-darwin" = home-manager.lib.homeManagerConfiguration {
                 pkgs = nixpkgs.legacyPackages.aarch64-darwin;
                 modules = [ ./home-gui.nix ];
             };
