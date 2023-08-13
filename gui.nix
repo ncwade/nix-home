@@ -20,6 +20,7 @@
     pkgs.kitty
     pkgs.waybar
     pkgs.rofi-wayland
+    pkgs.wl-clipboard
   ];
 }
 
