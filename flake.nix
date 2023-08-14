@@ -7,10 +7,9 @@
             url = "github:nix-community/home-manager";
             inputs.nixpkgs.follows = "nixpkgs";
           };
-          hyprland.url = "github:hyprwm/Hyprland";
     };
 
-    outputs = {nixpkgs, home-manager, hyprland, ...}: {
+    outputs = {nixpkgs, home-manager, ...}: {
         defaultPackage.x86_64-linux = home-manager.defaultPackage.x86_64-linux;
         defaultPackage.aarch64-darwin = home-manager.defaultPackage.aarch64-darwin;
 
@@ -18,8 +17,6 @@
             "intel-linux" = home-manager.lib.homeManagerConfiguration {
                 pkgs = nixpkgs.legacyPackages.x86_64-linux;
                 modules = [
-                  hyprland.homeManagerModules.default
-                  {wayland.windowManager.hyprland.enable = true;}
                   ./home-gui.nix
                 ];
             };
