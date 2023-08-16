@@ -3,6 +3,8 @@
 {
   home.packages = with pkgs; [
     gnomeExtensions.user-themes
+    gnomeExtensions.arc-menu
+    gnomeExtensions.dash-to-panel
     gnomeExtensions.pop-shell
     pop-launcher
     gnomeExtensions.rounded-window-corners
