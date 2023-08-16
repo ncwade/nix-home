@@ -7,6 +7,8 @@
   imports = [ 
     ./cli.nix
     ./gui.nix
+    ./modules/dconf.nix
+    ./modules/gnome.nix
   ];
 }
 
