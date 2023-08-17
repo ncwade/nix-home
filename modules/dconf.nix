@@ -81,25 +81,8 @@ with lib.hm.gvariant;
     "org/gnome/shell" = {
       disable-user-extensions = false;
       disabled-extensions = [ "workspace-indicator@gnome-shell-extensions.gcampax.github.com" "window-list@gnome-shell-extensions.gcampax.github.com" "windowsNavigator@gnome-shell-extensions.gcampax.github.com" "space-bar@luchrioh" "top-bar-organizer@julian.gse.jsts.xyz" ];
-      enabled-extensions = [ "user-theme@gnome-shell-extensions.gcampax.github.com" "pop-shell@system76.com" "rounded-window-corners@yilozt" "dash-to-panel@jderose9.github.com" "arcmenu@arcmenu.com" ];
+      enabled-extensions = [ "user-theme@gnome-shell-extensions.gcampax.github.com" "pop-shell@system76.com" "rounded-window-corners@yilozt" "dash-to-panel@jderose9.github.com" ];
       welcome-dialog-last-shown-version = "42.2";
-    };
-
-    "org/gnome/shell/extensions/arcmenu" = {
-      menu-background-color = "rgba(48,48,49,0.98)";
-      menu-border-color = "rgb(60,60,60)";
-      menu-button-appearance = "Icon";
-      menu-foreground-color = "rgb(223,223,223)";
-      menu-item-active-bg-color = "rgb(25,98,163)";
-      menu-item-active-fg-color = "rgb(255,255,255)";
-      menu-item-hover-bg-color = "rgb(21,83,158)";
-      menu-item-hover-fg-color = "rgb(255,255,255)";
-      menu-separator-color = "rgba(255,255,255,0.1)";
-      pinned-app-list = [ "Firefox" "" "firefox.desktop" "Files" "" "org.gnome.Nautilus.desktop" "Terminal" "" "org.gnome.Terminal.desktop" "ArcMenu Settings" "ArcMenu_ArcMenuIcon" "gnome-extensions prefs arcmenu@arcmenu.com" ];
-      prefs-visible-page = 0;
-      recently-installed-apps = [ "org.gnome.Nautilus.desktop" ];
-      search-entry-border-radius = mkTuple [ true 25 ];
-      show-activities-button = false;
     };
 
     "org/gnome/shell/extensions/dash-to-panel" = {
@@ -116,7 +99,7 @@ with lib.hm.gvariant;
         {"0":"MIDDLE"}
       '';
       panel-element-positions = ''
-        {"0":[{"element":"showAppsButton","visible":false,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"centerMonitor"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":false,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":true,"position":"stackedBR"}]}
+        {"0":[{"element":"showAppsButton","visible":true,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"centerMonitor"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":false,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":true,"position":"stackedBR"}]}
       '';
       panel-lengths = ''
         {"0":100}

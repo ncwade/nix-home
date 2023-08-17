@@ -1,5 +1,9 @@
 { pkgs, ... }:
 {
+  home.packages = with pkgs; [
+    thunderbird
+    signal-desktop
+  ];
   programs.chromium = {
     enable = true;
     package = pkgs.brave;
