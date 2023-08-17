@@ -14,7 +14,12 @@
       homeConfigurations."ncwade@laptop1" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         modules = [
-          ./home-gui.nix
+          ./modules/dconf.nix
+          ./modules/gnome.nix
+          ./modules/productivity.nix
+          ./modules/development.nix
+          ./cli.nix
+          ./ncwade.nix
         ];
       };
     };
