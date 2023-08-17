@@ -8,23 +8,18 @@
     gnomeExtensions.pop-shell
     pop-launcher
     gnomeExtensions.rounded-window-corners
+    gnome.nautilus
   ];
-  home.sessionVariables.GTK_THEME = "Catppuccin-Macchiato-Compact-Pink-Dark";
+  home.sessionVariables.GTK_THEME = "Dracula";
   gtk = {
     enable = true;
     theme = {
-      name = "Catppuccin-Macchiato-Compact-Pink-Dark";
-      package = pkgs.catppuccin-gtk.override {
-        accents = [ "pink" ];
-        size = "compact";
-        tweaks = [ "rimless" "black" ];
-        variant = "macchiato";
-      };
+      name = "Dracula";
+      package = pkgs.dracula-theme;
     };
-    cursorTheme = {
-      name = "Catppuccin Mocha Pink";
-      package = pkgs.catppuccin-cursors.mochaPink;
-      size = 16;
+    iconTheme = {
+      name = "Dracula";
+      package = pkgs.dracula-icon-theme;
     };
   };
 }

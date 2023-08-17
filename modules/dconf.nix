@@ -14,12 +14,8 @@ with lib.hm.gvariant;
     };
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
-      cursor-size = 16;
-      cursor-theme = "Catppuccin Mocha Pink";
       font-name = "RobotoMono Nerd Font 12";
       gtk-im-module = "gtk-im-context-simple";
-      gtk-theme = "Catppuccin-Macchiato-Compact-Pink-Dark";
-      icon-theme = "Papirus-Dark";
       text-scaling-factor = 1.5;
       enable-hot-corners = false;
     };
@@ -57,10 +53,10 @@ with lib.hm.gvariant;
         {"0":"MIDDLE"}
       '';
       panel-element-positions = ''
-        {"0":[{"element":"showAppsButton","visible":false,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":true,"position":"stackedBR"}]}
+        {"0":[{"element":"showAppsButton","visible":false,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"centerMonitor"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":false,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":true,"position":"stackedBR"}]}
       '';
       panel-lengths = ''
-        {"0":98}
+        {"0":100}
       '';
       panel-positions = ''
         {"0":"TOP"}
@@ -73,6 +69,8 @@ with lib.hm.gvariant;
       status-icon-padding = -1;
       tray-padding = -1;
       window-preview-title-position = "TOP";
+      trans-use-custom-opacity = true;
+      trans-panel-opacity = 0.0;
     };
   };
 }
