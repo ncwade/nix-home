@@ -4,10 +4,7 @@
   home.packages = with pkgs; [
     gnomeExtensions.user-themes
     gnomeExtensions.dash-to-panel
-    gnomeExtensions.pop-shell
-    pop-launcher
     gnomeExtensions.rounded-window-corners
-    gnome.nautilus
   ];
   home.sessionVariables.GTK_THEME = "Dracula";
   gtk = {

@@ -1,14 +1,11 @@
 { config, pkgs, ... }:
 {
-  programs.kitty = {
-    enable = true;
-    extraConfig = builtins.readFile ./config/kitty;
-  };
-
-  xdg.configFile."direnv/direnvrc".source = ./config/direnvrc;
-
-  home.packages = [
-    pkgs.kitty
+  fonts.fontconfig.enable = true;
+  home.packages = with pkgs;
+  [
+    jetbrains-mono
   ];
+  xdg.configFile."direnv/direnvrc".source = ./config/direnvrc;
+  xdg.configFile."kitty/kitty.conf".source = ./config/kitty;
 }
 

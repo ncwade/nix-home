@@ -60,7 +60,7 @@
     userName = "Nick Wade";
     userEmail = "me@ncwade.com";
     signing = {
-      key = "8A892A4DCAB96A68";
+      key = "46D1A13835754E36";
       signByDefault = true;
     };
     extraConfig = {
