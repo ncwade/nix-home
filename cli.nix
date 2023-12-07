@@ -118,12 +118,6 @@
 
   programs.ssh = {
     enable = true;
-    matchBlocks = {
-      "github.com" = {
-        hostname = "github.com";
-        identitiesOnly = true;
-      };
-    };
   };
 
   home.packages = [
