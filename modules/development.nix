@@ -7,5 +7,8 @@
   ];
   xdg.configFile."direnv/direnvrc".source = ./config/direnvrc;
   xdg.configFile."kitty/kitty.conf".source = ./config/kitty;
+  home.file.".gnupg/sshcontrol" = {
+    source = ./config/sshcontrol;
+  };
 }
 

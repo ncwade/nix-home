@@ -111,12 +111,16 @@
     ];
   };
 
+  services.gpg-agent = {
+    enable = true;
+    enableSshSupport = true;
+  };
+
   programs.ssh = {
     enable = true;
     matchBlocks = {
       "github.com" = {
         hostname = "github.com";
-        identityFile = "~/.ssh/ncwade.pub";
         identitiesOnly = true;
       };
     };
